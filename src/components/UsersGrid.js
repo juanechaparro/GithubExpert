@@ -1,6 +1,5 @@
 import { Card, Row, Col} from 'antd';
 import React,{useContext} from 'react'
-import { UserDetail } from '../containers/UserDetail';
 import AppContext from '../context/AppContext';
 import { useFetchUsers } from '../hooks/useFetchUsers';
 import { useNavigate } from 'react-router-dom';
