@@ -5,7 +5,7 @@ import {Home} from './containers/Home'
 import { UserDetail } from './containers/UserDetail';
 import AppContext from './context/AppContext'
 export const GitExpertApp = () => {
-    const [user, setUser] = useState('')
+    const [user, setUser] = useState('juanechaparro');
     const initialValue  = {user, setUser}
     // const user = useSetUser('');
     return (

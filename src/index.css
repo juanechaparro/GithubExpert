@@ -8,7 +8,7 @@ body {
    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
 }
 
-.title{
+.ttl{
   color: red;
 }
 code {
@@ -72,5 +72,8 @@ code {
   margin: 30px;
 }
 .table{
-  max-width: 1250px;
+  max-width: 1150px;
+}
+.detailScreen{
+padding: 100px;
 }
