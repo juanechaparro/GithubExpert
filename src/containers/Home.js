@@ -1,14 +1,15 @@
-import React,{useState} from 'react';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { SearchUsers } from '../components/SearchUsers'
 import { UsersGrid } from '../components/UsersGrid';
-
+import queryString from 'query-string'
 
 
 
 export const Home = () => {
 
-    
-    const[search , setSearch] = useState('')
+    const location = useLocation();
+    const {q= ''} = queryString.parse(location.search);
   
   return (
     <>
@@ -19,9 +20,15 @@ export const Home = () => {
     <hr/>
     <br />
     <br />
-    <SearchUsers setSearch ={setSearch}/>
-            
-    {search && <UsersGrid search={search}/>}        
+    <SearchUsers />
+    {
+               (q === '') ? 
+               <div className = "alert alert-info org">
+                   Ingresa el usuario de Github a buscar 
+              </div>
+              :  <UsersGrid search={q}/> 
+     }     
+          
 
    </>
   );

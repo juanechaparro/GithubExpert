@@ -34,8 +34,8 @@ export const UsersGrid = ({search}) => {
                          className = "card animate__animated animate__bounce"
                          cover={<img src={usr.url} alt={usr.login} />
                          }
-                         onClick={e =>{setUser(usr.login) 
-                            navigate('/user');}}
+                         onClick={e =>{ 
+                            navigate(`/user?q=${usr.login}`);}}
                          >
                          
                         <Meta title = {usr.login} description = {"Id : " + usr.id}/>

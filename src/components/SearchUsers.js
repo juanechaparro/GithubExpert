@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
-export const SearchUsers = ({setSearch}) => {
+import {  useNavigate } from 'react-router-dom';
+export const SearchUsers = () => {
+    const navigate = useNavigate();
     const [inputValue, setInputValue] = useState("")
      const handleInputChange = (e) =>{
          setInputValue(e.target.value);
@@ -8,7 +10,7 @@ export const SearchUsers = ({setSearch}) => {
      const handelSubmit = (e) =>{
         e.preventDefault();
         if(inputValue.trim().length > 2){
-        setSearch(inputValue)
+        navigate(`?q=${inputValue}`);
         setInputValue('');
     }
      }

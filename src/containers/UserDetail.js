@@ -1,13 +1,17 @@
-import React,{useContext} from 'react'
-import AppContext from '../context/AppContext'
+import React from 'react'
+
 import { useFetchDetails } from '../hooks/useFetchDetails';
 import { UserItem } from '../components/UserItem';
 import { ReposList } from '../components/ReposList';
 import { Link } from 'react-router-dom';
 import { Button } from 'antd';
+import queryString from 'query-string'
+import { useLocation } from 'react-router-dom';
 export const UserDetail = () => {
-const {user} = useContext(AppContext);
-const{userData, reposData }= useFetchDetails(user);
+const location = useLocation();
+const {q= ''} = queryString.parse(location.search);
+
+const{userData, reposData }= useFetchDetails(q);
 
     return (
         <>

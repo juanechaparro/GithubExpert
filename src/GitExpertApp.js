@@ -3,14 +3,12 @@ import { BrowserRouter,Routes, Route } from 'react-router-dom';
 
 import {Home} from './containers/Home'
 import { UserDetail } from './containers/UserDetail';
-import AppContext from './context/AppContext'
 export const GitExpertApp = () => {
-    const [user, setUser] = useState('juanechaparro');
-    const initialValue  = {user, setUser}
+
     // const user = useSetUser('');
     return (
         <div>
-            <AppContext.Provider value = {initialValue}>
+            
             <BrowserRouter>
             <Routes>
             <Route  path="/" element={<Home/>} />
@@ -18,7 +16,7 @@ export const GitExpertApp = () => {
             </Routes>
 
             </BrowserRouter>
-            </AppContext.Provider> 
+            
             
 
         </div>

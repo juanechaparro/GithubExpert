@@ -77,3 +77,10 @@ code {
 .detailScreen{
 padding: 100px;
 }
+.org{
+  width: 700px;
+  margin: 60px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
